@@ -1,17 +1,14 @@
-from datarepr import AdjList, AdjMat
+import numpy as np
 
 
 class Network:
-    def __init__(self, adjlist=None, adjmat=None,
-                 directed=False):
-        if adjlist is None == adjmat is None:
-            raise Exception(
-                'must pass only one of adjacency list and adjacency matrix')
+    '''Generic network class.
 
-        if adjlist is not None:
-            self.mat = AdjList(adjlist)
-        if adjmat is not None:
-            self.mat = AdjMat(adjmat)
+    Currently, only undirected and unweighted networks are supported.
 
-        self.directed = directed
-        self.nodes, self.dims = self.mat.make_nodes()
+    Attributes:
+        mat: an 2D ndarray for the adjacency matrix of the network
+    '''
+
+    def __init__(self, mat):
+        self.mat = np.array(mat)
