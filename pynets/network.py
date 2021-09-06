@@ -9,8 +9,10 @@ class Network:
 
     Attributes:
         mat: an 2D ndarray for the adjacency matrix of the 
-        network.
+            network.
     '''
+
+    from pynets.metrics._centrality import central_vertices
 
     def __init__(self, mat):
         if np.array(mat).shape[0] != np.array(mat).shape[1]:
