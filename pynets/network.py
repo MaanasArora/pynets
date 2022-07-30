@@ -8,7 +8,7 @@ class Network:
     supported.
 
     Attributes:
-        mat: an 2D ndarray for the adjacency matrix of the 
+        mat: a 2D ndarray for the adjacency matrix of the 
             network.
     '''
 
